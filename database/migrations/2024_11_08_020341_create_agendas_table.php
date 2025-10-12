@@ -15,7 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('user_id')->nullable(); // Optional user ID for the creator
             $table->string('judul'); //Agenda Rapat 
+            $table->string('qrcode')->unique()->nullable();
             $table->string('tempat_kegiatan'); //Ruangan
+            $table->string('latitude')->nullable();
+            $table->string('longitude')->nullable();
+            $table->integer('radius')->nullable();
             $table->date('tgl_kegiatan');
             $table->time('jam_mulai');
             $table->text('deskripsi_kegiatan'); //deskripsi rapat

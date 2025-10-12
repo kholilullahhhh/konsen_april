@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Agenda;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class AgendaController extends Controller
 {
@@ -35,10 +36,12 @@ class AgendaController extends Controller
     public function store(Request $request)
     {
         $r = $request->all();
+        $r['qrcode'] = Str::uuid();
         $r['tempat_kegiatan'] = $r['lokasi_kegiatan'];
-        // dd($r);
+        $r['latitude'] = $r['latitude'] ?? null;
+        $r['longitude'] = $r['longitude'] ?? null;
+        $r['radius'] = $r['radius'] ?? 50;
         Agenda::create($r);
-
 
         return redirect()->route('agenda.index')->with('message', 'store');
     }

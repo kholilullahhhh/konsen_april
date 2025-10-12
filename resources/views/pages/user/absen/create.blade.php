@@ -19,7 +19,7 @@
                                 <h4>Form Absensi Rapat</h4>
                             </div>
                             <div class="card-body">
-                                <form action="{{ route('user.absensi.store') }}" method="POST">
+                                <form action="{{ route('user.absensi.show-qr') }}" method="POST">
                                     @csrf
 
                                     <div class="form-group row mb-4">
@@ -41,45 +41,11 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Status
-                                            Kehadiran</label>
-                                        <div class="col-sm-12 col-md-7">
-                                            <select name="status" class="form-control @error('status') is-invalid @enderror"
-                                                required>
-                                                <option value="">Pilih Status</option>
-                                                <option value="hadir" {{ old('status') == 'hadir' ? 'selected' : '' }}>Hadir
-                                                </option>
-                                                <option value="tidak hadir" {{ old('status') == 'tidak hadir' ? 'selected' : '' }}>Tidak Hadir</option>
-                                                <option value="izin" {{ old('status') == 'izin' ? 'selected' : '' }}>Izin
-                                                </option>
-                                                <option value="sakit" {{ old('status') == 'sakit' ? 'selected' : '' }}>Sakit
-                                                </option>
-                                                <option value="terlambat" {{ old('status') == 'terlambat' ? 'selected' : '' }}>Terlambat</option>
-                                            </select>
-                                            @error('status')
-                                                <div class="invalid-feedback">{{ $message }}</div>
-                                            @enderror
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row mb-4">
-                                        <label
-                                            class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Keterangan</label>
-                                        <div class="col-sm-12 col-md-7">
-                                            <textarea class="form-control @error('keterangan') is-invalid @enderror"
-                                                name="keterangan" rows="3"
-                                                placeholder="Isi keterangan jika diperlukan">{{ old('keterangan') }}</textarea>
-                                            @error('keterangan')
-                                                <div class="invalid-feedback">{{ $message }}</div>
-                                            @enderror
-                                        </div>
-                                    </div>
 
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
                                         <div class="col-sm-12 col-md-7">
-                                            <button type="submit" class="btn btn-primary">Simpan Absensi</button>
+                                            <button type="submit" class="btn btn-primary">Lihat QrCode</button>
                                             <a href="{{ route('user.absensi.index') }}"
                                                 class="btn btn-secondary ml-2">Batal</a>
                                         </div>

@@ -11,6 +11,10 @@ class Absensi extends Model
     protected $fillable = [
         'agenda_id',
         'user_id',
+        'user_latitude',
+        'user_longitude',
+        'jarak',
+        'isvalid',
         'status',
         'keterangan', // Optional field for additional notes
     ];

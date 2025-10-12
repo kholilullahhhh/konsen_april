@@ -9,13 +9,17 @@ class Agenda extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'user_id', // ID pengguna yang membuat agenda
+        'user_id',
         'judul',
+        'qrcode',
         'tempat_kegiatan',
+        'latitude',
+        'longitude',
+        'radius',
         'tgl_kegiatan',
         'jam_mulai',
         'deskripsi_kegiatan',
-        'status', //aktif tidaknya kegitan itu
+        'status',
     ];
 
     public function user()

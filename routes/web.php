@@ -4,6 +4,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\AbsenController;
 use App\Http\Controllers\User\JadwalController;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -221,12 +222,11 @@ Route::group(
                 //absensi
                 Route::get('/', [AbsenController::class, 'userIndex'])->name('user.absensi.index');
                 Route::get('/create', [AbsenController::class, 'userCreate'])->name('user.absensi.create');
+                Route::post('/show-qr', [AbsenController::class, 'showQr'])->name('user.absensi.show-qr');
+                Route::get('/show-qr/{qrcode}', [AbsenController::class, 'absenQr'])->name('user.absensi.show-qr.absen');
                 Route::post('/store', [AbsenController::class, 'userStore'])->name('user.absensi.store');
 
-
             });
-
-
 
         });
     }
@@ -246,3 +246,7 @@ Route::group(['prefix' => 'auth', 'namespace' => 'App\Http\Controllers'], functi
     })->name('logout');
 });
 
+
+Route::get('/tes-qr', function () {
+    return view('qr-code');
+});

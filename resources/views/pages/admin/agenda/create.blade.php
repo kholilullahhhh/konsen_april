@@ -41,6 +41,30 @@
                                                 class="form-control" name="lokasi_kegiatan">
                                         </div>
                                     </div>
+
+                                    <div class="form-group row mb-4">
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Titik Lokasi</label>
+                                        <div class="col-sm-12 col-md-7">
+                                            <div class="row">
+                                                <div class="col-md-4 mb-2">
+                                                    <input type="text" id="latitude" name="latitude" class="form-control" placeholder="Latitude" readonly>
+                                                </div>
+                                                <div class="col-md-4 mb-2">
+                                                    <input type="text" id="longitude" name="longitude" class="form-control" placeholder="Longitude" readonly>
+                                                </div>
+                                            </div>
+                                            <button type="button" id="get-location" class="btn btn-info mt-2">📍 Ambil Lokasi Saat Ini</button>
+                                            <small class="text-muted d-block mt-2">Pastikan browser kamu mengizinkan akses lokasi.</small>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group row mb-4">
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Batas Radius</label>
+                                        <div class="col-sm-6 col-md-4">
+                                            <input type="number" id="radius" name="radius" class="form-control" placeholder="Radius (meter)" value="50">
+                                        </div>
+                                    </div>
+
                                     {{-- <div class="form-group row mb-4">
                                         <label
                                             class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kategori</label>
@@ -124,5 +148,21 @@
         <script src="{{ asset('js/page/features-post-create.js') }}"></script>
 
         <script src="{{ asset('js/page/forms-advanced-forms.js') }}"></script>
+
+        <script>
+            document.getElementById('get-location').addEventListener('click', function() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        document.getElementById('latitude').value = position.coords.latitude;
+                        document.getElementById('longitude').value = position.coords.longitude;
+                    }, function(error) {
+                        alert('Gagal mengambil lokasi: ' + error.message);
+                    });
+                } else {
+                    alert('Browser tidak mendukung geolocation.');
+                }
+            });
+        </script>
+
     @endpush
 @endsection
