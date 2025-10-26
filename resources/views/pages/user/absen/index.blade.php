@@ -4,7 +4,7 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Absensi Rapat Saya</h1>
+                <h1>Absensi Kelas Saya</h1>
             </div>
 
             <div class="section-body">
@@ -12,7 +12,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Daftar Kehadiran Rapat</h4>
+                                <h4>Daftar Kehadiran Mahasiswa</h4>
                                 <div class="card-header-action">
                                     <a href="{{ route('user.absensi.create') }}" class="btn btn-primary">
                                         <i class="fas fa-plus"></i> Isi Absensi
@@ -25,7 +25,7 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Agenda Rapat</th>
+                                                <th>Matakuliah</th>
                                                 <th>Status Kehadiran</th>
                                                 <th>Keterangan</th>
                                                 <th>Tanggal</th>

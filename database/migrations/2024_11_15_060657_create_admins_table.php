@@ -15,9 +15,9 @@ return new class extends Migration {
             $table->string('name');
             $table->string('username');
             $table->string('password');
-            $table->string('nuptk')->unique()->nullable(); //Nomor Unik Pendidik dan Tenaga Kependidikan
-            $table->string('jabatan')->nullable();
-            $table->enum('role', ['admin', 'user','kepala_sekolah'])->default('user'); //user = Guru
+            $table->string('nim')->unique()->nullable(); // NomorInduk Mahasiswa
+            $table->string('tahun_masuk')->nullable();
+            $table->enum('role', ['admin', 'user','dosen'])->default('user'); //user = mahasiswa
             $table->timestamps();
         });
     }

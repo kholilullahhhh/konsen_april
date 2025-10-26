@@ -57,9 +57,9 @@
                                                                 <select name="role" required placeholder="Masukkan Akun"
                                                                     class="form-control selectric">
                                                                     <option value="">-- Pilih Role Akun --</option>
-                                                                    <option value="user">Pegawai</option>
+                                                                    <option value="user">Mahasiswa</option>
                                                                     <option value="admin">Admin</option>
-                                                                    <option value="kepala_sekolah">Kepala Sekolah</option>
+                                                                    <option value="dosen">Dosen</option>
                                                                 </select>
                                                             </div>
                                                         </div>

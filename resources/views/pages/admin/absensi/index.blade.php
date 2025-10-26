@@ -9,7 +9,7 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Data Absensi Rapat</h1>
+                <h1>Data Absensi Kelas</h1>
             </div>
 
             <div class="section-body">
@@ -28,9 +28,9 @@
                                         <thead>
                                             <tr>
                                                 <th class="text-center">#</th>
-                                                <th>Nama Agenda</th>
+                                                <th>Nama Matakuliah</th>
                                                 <th>Nama Pegawai</th>
-                                                <th>NUPTK</th>
+                                                <th>NIM</th>
                                                 <th>Status Kehadiran</th>
                                                 <th>Keterangan</th>
                                                 <th>Tanggal Absensi</th>
@@ -43,7 +43,7 @@
                                                     <td>{{ ++$i }}</td>
                                                     <td>{{ $data->agenda->judul ?? 'N/A' }}</td>
                                                     <td>{{ $data->user->name ?? 'N/A' }}</td>
-                                                    <td>{{ $data->user->nuptk ?? 'N/A' }}</td>
+                                                    <td>{{ $data->user->nim ?? 'N/A' }}</td>
                                                     <td>
                                                         @switch($data->status)
                                                             @case('hadir')

@@ -23,7 +23,7 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Agenda Rapat</label>
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Matakuliah</label>
                                         <div class="col-sm-12 col-md-7">
                                             <select name="agenda_id" class="form-control" required>
                                                 @foreach($agendas as $agenda)

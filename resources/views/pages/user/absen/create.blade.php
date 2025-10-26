@@ -4,7 +4,7 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Isi Absensi Rapat</h1>
+                <h1>Isi Absensi Mahasiswa</h1>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item"><a href="{{ route('user.absensi.index') }}">Absensi</a></div>
                     <div class="breadcrumb-item">Isi Absensi</div>
@@ -23,8 +23,8 @@
                                     @csrf
 
                                     <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Agenda
-                                            Rapat</label>
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Matakuliah
+                                            </label>
                                         <div class="col-sm-12 col-md-7">
                                             <select name="agenda_id"
                                                 class="form-control select2 @error('agenda_id') is-invalid @enderror"

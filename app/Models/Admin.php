@@ -10,10 +10,10 @@ class Admin extends Model
     use HasFactory;
     protected $fillable = [
         'name',
-        'nuptk',
+        'nim',
         'username',
         'password',
-        'jabatan',
+        'tahun_masuk',
         'role'
     ];
 }

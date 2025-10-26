@@ -14,8 +14,7 @@
                 @csrf
                 <div class="form-group">
                     <label for="email">Username</label>
-                    <input id="email" type="username" class="form-control" name="username" tabindex="1" required
-                        autofocus>
+                    <input id="email" type="username" class="form-control" name="username" tabindex="1" required autofocus>
                     <div class="invalid-feedback">
                         Please fill in your username
                     </div>
@@ -43,8 +42,8 @@
                     <select class="form-control  selectric" name="role" id="">
                         <option value="">-- Pilih Role --</option>
                         <option value="admin">Admin</option>
-                        <option value="user">Guru</option>
-                        <option value="kepala_sekolah">Kepala Sekolah</option>
+                        <option value="user">mahasiswa</option>
+                        <option value="dosen">Dosen</option>
                     </select>
                 </div>
 
@@ -81,14 +80,14 @@
             swal("Warning", "Periksa kembali username dan password anda", "error");
         </script>
     @endif
-    {{--  login dulu --}}
+    {{-- login dulu --}}
     @if (session('message') == 'need login')
         <script>
             swal("Warning", "Anda harus login terlebih dahulu", "error");
         </script>
     @endif
 
-    {{--  succces logout --}}
+    {{-- succces logout --}}
     @if (session('message') == 'sukses logout')
         <script>
             swal("Berhasil", "Anda Telah Logout", "success");

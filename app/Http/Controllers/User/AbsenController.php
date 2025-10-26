@@ -17,7 +17,7 @@ class AbsenController extends Controller
     {
         // $datas = Absensi::with('agenda')->get();
         $datas = Absensi::whereHas('user', function ($query) {
-            $query->where('nuptk', auth()->user()->nuptk);
+            $query->where('nim', auth()->user()->nim);
         })->with(['user', 'agenda'])->latest()->get();
         $menu = $this->menu;
 
@@ -34,16 +34,18 @@ class AbsenController extends Controller
         return view('pages.user.absen.create', compact('agendas', 'menu'));
     }
 
-    public function showQr(Request $request){
+    public function showQr(Request $request)
+    {
         $menu = $this->menu;
         $agenda = Agenda::find($request->agenda_id);
 
         return view('pages.user.absen.show', compact('agenda', 'menu'));
     }
 
-    public function absenQr($qrcode){
+    public function absenQr($qrcode)
+    {
         $menu = $this->menu;
-        
+
         $agenda = Agenda::where('qrcode', $qrcode)->first();
 
         return view('pages.user.absen.qr-code', compact('agenda', 'menu'));

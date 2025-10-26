@@ -1,10 +1,10 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="{{route('dashboard') }}">SDI BONTOALA</a>
+            <a href="{{route('dashboard') }}">ABSENSI MAHASISWA</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="{{route('dashboard') }}">SDI BONTOALA</a>
+            <a href="{{route('dashboard') }}">ABSENSI MAHASISWA</a>
         </div>
 
         <ul class="sidebar-menu">
@@ -25,17 +25,17 @@
                     <ul class="dropdown-menu">
                         <li class="{{ $menu == 'pegawai' ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('pegawai.index') }}">
-                                Data Guru
+                                Data mahasiswa
                             </a>
                         </li>
                         <li class="{{ $menu == 'agenda' ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('agenda.index') }}">
-                                Data Jadwal Rapat
+                                Data jadwal Kelas
                             </a>
                         </li>
                         <li class="{{ $menu == 'jadwal' ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('jadwal.index') }}">
-                                Data Jam Mengajar Guru
+                                Data Jam Mengajar Dosen
                             </a>
                         </li>
                     </ul>
@@ -43,15 +43,15 @@
 
 
 
-                <li class="{{ $menu == 'penilaian_kinerja' ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ route('penilaian_kinerja.index') }}">
-                        <i class="fas fa-wallet"></i> <span>Data Laporan Kinerja</span>
-                    </a>
-                </li>
+                <!-- <li class="{{ $menu == 'penilaian_kinerja' ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('penilaian_kinerja.index') }}">
+                            <i class="fas fa-wallet"></i> <span>Data Laporan Kinerja</span>
+                        </a>
+                    </li> -->
 
                 <li class="{{ $menu == 'absensi' ? 'active' : '' }}">
                     <a class="nav-link" href="{{ route('absensi.index') }}">
-                        <i class="fas fa-wallet"></i> <span>Data Absen Rapat</span>
+                        <i class="fas fa-wallet"></i> <span>Data Absen Kelas</span>
                     </a>
                 </li>
 

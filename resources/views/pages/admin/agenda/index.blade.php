@@ -10,11 +10,11 @@
             }
         </style>
     @endpush
- 
+
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Data Jadwal Rapat</h1>
+                <h1>Data Jadwal Kelas</h1>
             </div>
 
             <div class="section-body">
@@ -25,7 +25,7 @@
                                 <!-- Navigation Buttons -->
 
                                 <a href="{{ route('agenda.create') }}" class="btn btn-primary text-white my-3">+ Tambah
-                                    Agenda</a>
+                                    Jadwal</a>
 
                                 <!-- Tables Section -->
                                 <!-- PPNPN -->
@@ -46,36 +46,36 @@
                                         </thead>
                                         <tbody>
                                             @foreach ($datas as $i => $data)
-                                                <?php
+                                                                                    <?php
                                                 setlocale(LC_ALL, 'IND');
-                                                
+
                                                 $tgl_kegiatan = strftime('%d %B', strtotime($data->tgl_kegiatan));
                                                 $tgl_selesai = strftime('%d %B %Y', strtotime($data->tgl_selesai));
-                                                ?>
-                                                <tr>
-                                                    <td>{{ ++$i }}</td>
-                                                    <td>{{ $data->judul ?? '' }}</td>
-                                                    {{-- <td>{!! $data->isi ?? '' !!}</td> --}}
-                                                    <td>{{ $data->tempat_kegiatan }} </td>
-                                                    <td>{{ $data->tgl_kegiatan }} - {{ $data->tgl_selesai }} </td>
-                                                    <td>{{ $data->status }} </td>
-                                                    <td>
-                                                        @if ($data->status == 'publish')
-                                                            <span class="badge badge-success">Publish</span>
-                                                        @else
-                                                            <span class="badge badge-warning">Belum Publish</span>
-                                                        @endif
+                                                                                            ?>
+                                                                                    <tr>
+                                                                                        <td>{{ ++$i }}</td>
+                                                                                        <td>{{ $data->judul ?? '' }}</td>
+                                                                                        {{-- <td>{!! $data->isi ?? '' !!}</td> --}}
+                                                                                        <td>{{ $data->tempat_kegiatan }} </td>
+                                                                                        <td>{{ $data->tgl_kegiatan }} - {{ $data->tgl_selesai }} </td>
+                                                                                        <td>{{ $data->status }} </td>
+                                                                                        <td>
+                                                                                            @if ($data->status == 'publish')
+                                                                                                <span class="badge badge-success">Publish</span>
+                                                                                            @else
+                                                                                                <span class="badge badge-warning">Belum Publish</span>
+                                                                                            @endif
 
-                                                    </td>
-                                                    <td>
-                                                        <a href="{{ route('agenda.edit', $data->id) }}"
-                                                            class="btn btn-warning my-2"><i class="fas fa-edit"></i></a>
-                                                        <button onclick="deleteData({{ $data->id }}, 'agenda')"
-                                                            class="btn btn-danger">
-                                                            <i class="fas fa-trash-alt"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <a href="{{ route('agenda.edit', $data->id) }}"
+                                                                                                class="btn btn-warning my-2"><i class="fas fa-edit"></i></a>
+                                                                                            <button onclick="deleteData({{ $data->id }}, 'agenda')"
+                                                                                                class="btn btn-danger">
+                                                                                                <i class="fas fa-trash-alt"></i>
+                                                                                            </button>
+                                                                                        </td>
+                                                                                    </tr>
                                             @endforeach
                                         </tbody>
                                     </table>
@@ -97,7 +97,7 @@
         <script src="{{ asset('js/page/modules-datatables.js') }}"></script>
 
         <script type="text/javascript">
-            $(document).ready(function() {
+            $(document).ready(function () {
                 // Existing DataTable initialization
                 var language = {
                     "sSearch": "Pencarian Data Kegiatan RPPH : ",
