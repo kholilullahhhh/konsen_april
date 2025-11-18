@@ -4,11 +4,11 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Edit Guru Honorer</h1>
+                <h1>Edit Mahasiswa</h1>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></div>
-                    <div class="breadcrumb-item"><a href="{{ route('pegawai.index') }}">Data Guru Honorer</a></div>
-                    <div class="breadcrumb-item active">Edit Guru</div>
+                    <div class="breadcrumb-item"><a href="{{ route('pegawai.index') }}">Data Mahasiswa</a></div>
+                    <div class="breadcrumb-item active">Edit Mahasiswa</div>
                 </div>
             </div>
 
@@ -17,7 +17,7 @@
                     <div class="col-md-12 col-lg-8 offset-lg-2">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Formulir Edit Guru</h4>
+                                <h4>Formulir Edit Mahasiswa</h4>
                             </div>
                             <div class="card-body">
                                 @if ($errors->any())
@@ -56,9 +56,9 @@
                                                     value="{{ old('username', $data->username) }}" required>
                                             </div>
                                             <div class="form-group">
-                                                <label>NUPTK</label>
-                                                <input type="text" name="nuptk" class="form-control"
-                                                    value="{{ old('nuptk', $data->nuptk) }}">
+                                                <label>NIM</label>
+                                                <input type="text" name="nim" class="form-control"
+                                                    value="{{ old('nim', $data->nim) }}">
                                             </div>
 
                                             <div class="form-group">

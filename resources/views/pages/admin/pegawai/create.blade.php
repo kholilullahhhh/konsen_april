@@ -4,11 +4,11 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Tambah Data Guru</h1>
+                <h1>Tambah Data Mahasiswa</h1>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></div>
-                    <div class="breadcrumb-item"><a href="{{ route('pegawai.index') }}">Data Guuru</a></div>
-                    <div class="breadcrumb-item active">Tambah Guru</div>
+                    <div class="breadcrumb-item"><a href="{{ route('pegawai.index') }}">Data Mahasiswa</a></div>
+                    <div class="breadcrumb-item active">Tambah Mahasiswa</div>
                 </div>
             </div>
 
@@ -17,7 +17,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Formulir Pendaftaran Guru</h4>
+                                <h4>Formulir Pendaftaran Mahasiswa</h4>
                             </div>
                             <div class="card-body">
                                 @if ($errors->any())
@@ -61,8 +61,8 @@
                                         <div class="col-md-6">
                                             <!-- Employee Information -->
                                             <div class="form-group">
-                                                <label>NUPTK</label>
-                                                <input type="text" name="nuptk" class="form-control" value="{{ old('nuptk') }}">
+                                                <label>NIM</label>
+                                                <input type="text" name="nim" class="form-control" value="{{ old('nim') }}">
                                             </div>
                                             <div class="form-group">
                                                 <label>Password <span class="text-danger">*</span></label>

@@ -30,7 +30,7 @@
                                         <thead>
                                             <tr>
                                                 <th class="text-center">#</th>
-                                                <th>Nama Guru</th>
+                                                <th>Nama Dosen</th>
                                                 <th>Mata Pelajaran</th>
                                                 <th>Tanggal</th>
                                                 <th>Jam Mulai</th>
@@ -88,18 +88,18 @@
         <script src="{{ asset('js/page/modules-datatables.js') }}"></script>
 
         <script type="text/javascript">
-                $('#table-jadwal').DataTable({
-                    paging: true,
+            $('#table-jadwal').DataTable({
+                paging: true,
                 searching: true,
                 order: [[6, 'asc']], // urut berdasarkan kolom Tanggal Absensi (index ke-6 dari <th>)
-                    language: {
-                        url: 'https://cdn.datatables.net/plug-ins/2.1.0/i18n/id.json',
-                        },
-                    columnDefs: [
-                    {orderable: false, targets: [7] }, // kolom Action tidak bisa sort
-                    {searchable: false, targets: [0, 7] } // kolom # dan Action tidak bisa search
-                    ]
-                    });
+                language: {
+                    url: 'https://cdn.datatables.net/plug-ins/2.1.0/i18n/id.json',
+                },
+                columnDefs: [
+                    { orderable: false, targets: [7] }, // kolom Action tidak bisa sort
+                    { searchable: false, targets: [0, 7] } // kolom # dan Action tidak bisa search
+                ]
+            });
         </script>
         </script>
     @endpush

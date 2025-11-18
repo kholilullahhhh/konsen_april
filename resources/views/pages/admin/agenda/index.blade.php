@@ -14,7 +14,7 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Data Jadwal Kelas</h1>
+                <h1>Data Absen Kelas</h1>
             </div>
 
             <div class="section-body">
@@ -25,7 +25,7 @@
                                 <!-- Navigation Buttons -->
 
                                 <a href="{{ route('agenda.create') }}" class="btn btn-primary text-white my-3">+ Tambah
-                                    Jadwal</a>
+                                    Absen Kelas</a>
 
                                 <!-- Tables Section -->
                                 <!-- PPNPN -->
@@ -35,11 +35,11 @@
                                         <thead>
                                             <tr>
                                                 <th class="text-center">#</th>
-                                                <th>Judul Agenda</th>
+                                                <th>Nama Kelas</th>
                                                 {{-- <th>Isi Agenda</th> --}}
                                                 <th>Ruangan</th>
-                                                <th>Tanggal Agenda</th>
-                                                <th>Jam Agenda</th>
+                                                <th>Tanggal Kelas</th>
+                                                <th>Jam Kelas</th>
                                                 <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
@@ -51,7 +51,7 @@
 
                                                 $tgl_kegiatan = strftime('%d %B', strtotime($data->tgl_kegiatan));
                                                 $tgl_selesai = strftime('%d %B %Y', strtotime($data->tgl_selesai));
-                                                                                            ?>
+                                                                                                                                                                                    ?>
                                                                                     <tr>
                                                                                         <td>{{ ++$i }}</td>
                                                                                         <td>{{ $data->judul ?? '' }}</td>

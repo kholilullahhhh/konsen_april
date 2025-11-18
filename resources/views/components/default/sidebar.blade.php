@@ -9,7 +9,7 @@
 
         <ul class="sidebar-menu">
 
-            <li class="menu-header">Dashboard</li>
+            <li class="menu-header">Dashboard</li>  
 
             <li class="nav-item  {{ $menu == 'dashboard' ? 'active' : '' }}">
                 <a href="{{ route('dashboard') }}" class="nav-link "><i
@@ -30,7 +30,7 @@
                         </li>
                         <li class="{{ $menu == 'agenda' ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('agenda.index') }}">
-                                Data jadwal Kelas
+                                Data Absen Kelas
                             </a>
                         </li>
                         <li class="{{ $menu == 'jadwal' ? 'active' : '' }}">
@@ -44,16 +44,16 @@
 
 
                 <!-- <li class="{{ $menu == 'penilaian_kinerja' ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('penilaian_kinerja.index') }}">
-                            <i class="fas fa-wallet"></i> <span>Data Laporan Kinerja</span>
+                                    <a class="nav-link" href="{{ route('penilaian_kinerja.index') }}">
+                                        <i class="fas fa-wallet"></i> <span>Data Laporan Kinerja</span>
+                                    </a>
+                                </li> -->
+
+                <!-- <li class="{{ $menu == 'absensi' ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('absensi.index') }}">
+                            <i class="fas fa-wallet"></i> <span>Data Jadwal Kelas</span>
                         </a>
                     </li> -->
-
-                <li class="{{ $menu == 'absensi' ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ route('absensi.index') }}">
-                        <i class="fas fa-wallet"></i> <span>Data Absen Kelas</span>
-                    </a>
-                </li>
 
 
                 <li class="{{ $menu == 'akun' ? 'active' : '' }}">

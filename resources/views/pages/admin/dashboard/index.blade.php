@@ -144,7 +144,7 @@
                 <div class="d-flex justify-content-between align-items-center w-100">
                     <div>
                         <h1 class="h3 mb-0 text-gray-800">Dashboard Absensi</h1>
-                        <p class="mb-0 text-muted">Ringkasan dan analisis kehadiran rapat</p>
+                        <p class="mb-0 text-muted">Ringkasan dan analisis kehadiran Kelas</p>
                     </div>
                     <div class="section-header-breadcrumb">
                         <div class="breadcrumb-item active"><i class="bi bi-house-door"></i> Dashboard</div>
@@ -163,7 +163,7 @@
                                         <i class="bi bi-calendar-event"></i>
                                     </div>
                                     <div>
-                                        <div class="card-label">Total Agenda Rapat</div>
+                                        <div class="card-label">Total Absen Kelas</div>
                                         <div class="card-value">{{ $totalAgendas }}</div>
                                     </div>
                                 </div>

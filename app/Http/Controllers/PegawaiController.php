@@ -30,7 +30,7 @@ class PegawaiController extends Controller
     {
         $menu = $this->menu;
         $user = User::where('role', 'user')->get();
-        return view('pages.admin.pegawai.create', compact('menu',  'user'));
+        return view('pages.admin.pegawai.create', compact('menu', 'user'));
     }
 
     /**
@@ -57,7 +57,7 @@ class PegawaiController extends Controller
             Admin::create($r);
             User::create($r);
 
-            return redirect()->route('pegawai.index')->with('message', 'store');
+            return redirect()->route('pegawai.index')->with('message', 'Data Pegawai berhasil ditambahkan.');
         } else {
             return redirect()->route('pegawai.index')->with('message', 'username sudah ada');
         }

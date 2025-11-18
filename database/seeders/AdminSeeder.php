@@ -34,7 +34,7 @@ class AdminSeeder extends Seeder
                 'name' => $guru['name'],
                 'username' => strtolower(Str::slug($guru['name'])),
                 'password' => bcrypt('user123'),
-                'nim' => str_pad(random_int(1000000000, 9999999999), 10, '0', STR_PAD_LEFT),
+                'nim' => str_pad(random_int(200000, 299999), 6, '0', STR_PAD_LEFT),
                 'tahun_masuk' => $guru['tahun_masuk'],
                 'role' => 'user',
             ]);
@@ -42,7 +42,7 @@ class AdminSeeder extends Seeder
                 'name' => $guru['name'],
                 'username' => strtolower(Str::slug($guru['name'])),
                 'password' => bcrypt('user123'),
-                'nim' => str_pad(random_int(1000000000, 9999999999), 10, '0', STR_PAD_LEFT),
+                'nim' => str_pad(random_int(200000, 299999), 6, '0', STR_PAD_LEFT),
                 'tahun_masuk' => $guru['tahun_masuk'],
                 'role' => 'user',
             ]);
@@ -57,16 +57,16 @@ class AdminSeeder extends Seeder
                 'role' => 'admin',
             ],
             [
-                'name' => 'Kepala Sekolah',
-                'username' => 'kepala',
-                'password' => bcrypt('kepala'),
+                'name' => 'Dosen',
+                'username' => 'Dosen',
+                'password' => bcrypt('Dosen'),
                 'role' => 'admin',
             ],
             [
                 'name' => 'mahasiswa',
                 'username' => 'mahasiswa',
                 'password' => bcrypt('mahasiswa'),
-                'nim' => '1234567890',
+                'nim' => '232058',
                 'role' => 'user',
             ],
         ];
