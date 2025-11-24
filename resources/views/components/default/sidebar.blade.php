@@ -33,32 +33,32 @@
                                 Data Absen Kelas
                             </a>
                         </li>
-                        <li class="{{ $menu == 'absen' ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ route('absensi.index') }}">
-                                Data Rekap Absensi
-                            </a>
-                        </li>
                         <li class="{{ $menu == 'jadwal' ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('jadwal.index') }}">
                                 Data Jam Mengajar Dosen
                             </a>
                         </li>
                     </ul>
+                <li class="{{ $menu == 'absen' ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('absensi.index') }}">
+                        <i class="fas fa-wallet"></i> <span>Data Rekap Absensi</span>
+                    </a>
+                </li>
                 </li>
 
 
 
                 <!-- <li class="{{ $menu == 'penilaian_kinerja' ? 'active' : '' }}">
-                                                                                                <a class="nav-link" href="{{ route('penilaian_kinerja.index') }}">
-                                                                                                    <i class="fas fa-wallet"></i> <span>Data Laporan Kinerja</span>
-                                                                                                </a>
-                                                                                            </li> -->
+                                                                                                            <a class="nav-link" href="{{ route('penilaian_kinerja.index') }}">
+                                                                                                                <i class="fas fa-wallet"></i> <span>Data Laporan Kinerja</span>
+                                                                                                            </a>
+                                                                                                        </li> -->
 
                 <!-- <li class="{{ $menu == 'absensi' ? 'active' : '' }}">
-                                                                                    <a class="nav-link" href="{{ route('absensi.index') }}">
-                                                                                        <i class="fas fa-wallet"></i> <span>Data Jadwal Kelas</span>
-                                                                                    </a>
-                                                                                </li> -->
+                                                                                                <a class="nav-link" href="{{ route('absensi.index') }}">
+                                                                                                    <i class="fas fa-wallet"></i> <span>Data Jadwal Kelas</span>
+                                                                                                </a>
+                                                                                            </li> -->
 
 
                 <li class="{{ $menu == 'akun' ? 'active' : '' }}">
@@ -79,10 +79,10 @@
                     </a>
                 </li>
                 <!-- <li class="{{ $menu == 'jadwal' ? 'active' : '' }}">
-                                                                                <a class="nav-link" href="{{ route('user.jadwal.index') }}">
-                                                                                    <i class="fas fa-wallet"></i> <span>Data Input Nilai</span>
-                                                                                </a>
-                                                                            </li> -->
+                                                                                            <a class="nav-link" href="{{ route('user.jadwal.index') }}">
+                                                                                                <i class="fas fa-wallet"></i> <span>Data Input Nilai</span>
+                                                                                            </a>
+                                                                                        </li> -->
                 <li class="menu-header">Landing Page</li>
 
             @endif
@@ -90,10 +90,10 @@
             @if (session('role') == 'dosen')
 
                 <!-- <li class="{{ $menu == 'penilaian_kinerja' ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('penilaian_kinerja.index') }}">
-                            <i class="fas fa-wallet"></i> <span>Laporan Kinerja</span>
-                        </a>
-                    </li> -->
+                                    <a class="nav-link" href="{{ route('penilaian_kinerja.index') }}">
+                                        <i class="fas fa-wallet"></i> <span>Laporan Kinerja</span>
+                                    </a>
+                                </li> -->
                 <li class="{{ $menu == 'agenda' ? 'active' : '' }}">
                     <a class="nav-link" href="{{ route('agenda.index') }}">
                         <i class="fas fa-wallet"></i> <span>Data Absen Kelas </span>
