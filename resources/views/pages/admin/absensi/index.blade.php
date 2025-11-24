@@ -68,8 +68,8 @@
                                                     <td>{{ $data->keterangan ?? '-' }}</td>
                                                     <td>{{ $data->created_at->format('d F Y H:i') }}</td>
                                                     <td>
-                                                        <a href="{{ route('absensi.edit', $data->id) }}"
-                                                            class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+                                                        <!-- <a href="{{ route('absensi.edit', $data->id) }}"
+                                                            class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a> -->
                                                         <button onclick="deleteData({{ $data->id }}, 'absensi')" 
                                                                 class="btn btn-danger btn-sm" title="Hapus">
                                                             <i class="fas fa-trash-alt"></i>

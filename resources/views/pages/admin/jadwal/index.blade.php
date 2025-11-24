@@ -35,7 +35,7 @@
                                                 <th>Tanggal</th>
                                                 <th>Jam Mulai</th>
                                                 <th>Jam Selesai</th>
-                                                <th>Keterangan</th>
+                                                <!-- <th>Keterangan</th> -->
 
                                                 <th>Action</th>
                                             </tr>
@@ -49,13 +49,13 @@
                                                     <td>{{ \Carbon\Carbon::parse($data->tanggal)->format('d F Y') }}</td>
                                                     <td>{{ $data->jam_mulai }}</td>
                                                     <td>{{ $data->jam_selesai }}</td>
-                                                    <td>
+                                                    <!-- <td>
                                                         @if($data->keterangan == 'ya')
                                                             <span class="badge badge-success">Aktif</span>
                                                         @else
                                                             <span class="badge badge-secondary">Tidak Aktif</span>
                                                         @endif
-                                                    </td>
+                                                    </td> -->
 
                                                     <td>
                                                         <a href="{{ route('jadwal.edit', $data->id) }}"

@@ -17,7 +17,7 @@ return new class extends Migration {
             $table->date('tanggal');
             $table->time('jam_mulai');
             $table->time('jam_selesai');
-            $table->enum('keterangan', ['ya', 'tidak'])->default('tidak');
+            // $table->enum('keterangan', ['ya', 'tidak'])->default('tidak');
             $table->timestamps();
         });
     }

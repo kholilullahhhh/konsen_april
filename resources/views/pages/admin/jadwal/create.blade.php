@@ -70,17 +70,17 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group row mb-4">
-                                        <label
-                                            class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Input Nilai</label>
-                                        <div class="col-sm-12 col-md-7">
-                                            <select name="keterangan" class="form-control" required>
-                                                <option value="">Pilih Keterangan</option>
-                                                <option value="ya">Aktif</option>
-                                                <option value="tidak">Tidak Aktif</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                                    <!-- <div class="form-group row mb-4">
+                                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Input
+                                                Nilai</label>
+                                            <div class="col-sm-12 col-md-7">
+                                                <select name="keterangan" class="form-control" required>
+                                                    <option value="">Pilih Keterangan</option>
+                                                    <option value="ya">Aktif</option>
+                                                    <option value="tidak">Tidak Aktif</option>
+                                                </select>
+                                            </div>
+                                        </div> -->
 
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>

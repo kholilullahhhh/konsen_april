@@ -16,7 +16,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Form Absensi Rapat</h4>
+                                <h4>Form Absensi Kelas</h4>
                             </div>
                             <div class="card-body">
                                 <form action="{{ route('user.absensi.show-qr') }}" method="POST">
@@ -24,7 +24,7 @@
 
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Matakuliah
-                                            </label>
+                                        </label>
                                         <div class="col-sm-12 col-md-7">
                                             <select name="agenda_id"
                                                 class="form-control select2 @error('agenda_id') is-invalid @enderror"

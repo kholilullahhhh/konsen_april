@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
         $this->call(AdminSeeder::class);
         // $this->call(AgendaSeeder::class);
         // $this->call(IndicatorsSeeder::class);
-        // $this->call(MapelSeeder::class);
+        $this->call(MapelSeeder::class);
         // $this->call(JadwalSeeder::class);
         // $this->call(AbsenSeeder::class);
     }

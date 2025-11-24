@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 
 class AbsensiController extends Controller
 {
-    private $menu = 'absensi';
+    private $menu = 'absen';
 
     /**
      * Display a listing of the resource.
