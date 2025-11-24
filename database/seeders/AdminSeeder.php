@@ -58,9 +58,9 @@ class AdminSeeder extends Seeder
             ],
             [
                 'name' => 'Dosen',
-                'username' => 'Dosen',
-                'password' => bcrypt('Dosen'),
-                'role' => 'admin',
+                'username' => 'dosen',
+                'password' => bcrypt('dosen'),
+                'role' => 'dosen',
             ],
             [
                 'name' => 'mahasiswa',

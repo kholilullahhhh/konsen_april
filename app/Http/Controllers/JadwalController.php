@@ -43,7 +43,7 @@ class JadwalController extends Controller
     {
         $menu = $this->menu;
         $mapel = Mapel::all();
-        $users = User::where('role', 'user')->get();
+        $users = User::where('role', 'dosen')->get();
         return view('pages.admin.jadwal.create', compact('users', 'mapel', 'menu'));
     }
 

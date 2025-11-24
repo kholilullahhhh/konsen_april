@@ -198,6 +198,7 @@ Route::group(
             // Jadwal
             Route::prefix('jadwal')->group(function () {
                 Route::get('/', 'JadwalController@index')->name('jadwal.index');
+                Route::get('/dosenJadwal', 'JadwalController@indexDosen')->name('dosen.jadwal.index');
                 Route::get('/create', 'JadwalController@create')->name('jadwal.create');
                 Route::post('/store', 'JadwalController@store')->name('jadwal.store');
                 Route::get('/edit/{id}', 'JadwalController@edit')->name('jadwal.edit');
@@ -205,7 +206,7 @@ Route::group(
                 Route::post('/hapus/{id}', 'JadwalController@destroy')->name('jadwal.hapus');
 
 
- 
+
             });
 
             Route::prefix('jdwl')->group(function () {
