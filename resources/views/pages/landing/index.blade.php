@@ -8,14 +8,14 @@
         </style>
     @endpush
     <div class="banner-carousel banner-carousel-1 mb-0">
-        <div class="banner-carousel-item" style="background-image:url({{ asset('landing/images/slider-main/bonto1.jpeg') }})">
+        <div class="banner-carousel-item" style="background-image:url({{ asset('landing/images/slider-main/bg1.jpg') }})">
             <div class="slider-content">
                 <div class="container h-100">
                     <div class="row align-items-center h-100">
                         <div class="col-md-12 text-center">
                             <h2 class="slide-title" data-animation-in="slideInLeft">Selamat Datang di</h2>
-                            <h3 class="slide-sub-title" data-animation-in="slideInRight">Sistem Penilaian Kinerja<br>
-                                SDI Bontoala Satu
+                            <h3 class="slide-sub-title" data-animation-in="slideInRight">Sistem Absensi Mahasiswa<br>
+                                Universitas Teknologi Digital
                             </h3>
                             <p data-animation-in="slideInLeft" data-duration-in="1.2">
                                 {{-- <a href="services.html" class="slider btn btn-primary">Our Services</a>
@@ -27,15 +27,15 @@
             </div>
         </div>
 
-        <div class="banner-carousel-item" style="background-image:url({{ asset('landing/images/slider-main/bonto2.jpeg') }})">
+        <div class="banner-carousel-item" style="background-image:url({{ asset('landing/images/slider-main/bg2.jpg') }})">
             <div class="slider-content text-left">
                 <div class="container h-100">
                     <div class="row align-items-center h-100">
                         <div class="col-md-12">
-                            <h2 class="slide-title-box" data-animation-in="slideInDown">Siap Melayani Anda</h2>
-                            <h3 class="slide-title" data-animation-in="fadeIn">Dedikasi Kami untuk Anda</h3>
-                            <h3 class="slide-sub-title" data-animation-in="slideInLeft">Sistem Penilaian Kinerja<br>
-                                SDI Bontoala Satu</h3>
+                            <h2 class="slide-title-box" data-animation-in="slideInDown">Sistem Absensi Modern</h2>
+                            <h3 class="slide-title" data-animation-in="fadeIn">Digitalisasi Presensi Kampus</h3>
+                            <h3 class="slide-sub-title" data-animation-in="slideInLeft">Sistem Absensi Mahasiswa<br>
+                                Universitas Teknologi Digital</h3>
                             <p data-animation-in="slideInRight">
                                 {{-- <a href="services.html" class="slider btn btn-primary border">Pelayanan Kami</a> --}}
                             </p>
@@ -45,16 +45,16 @@
             </div>
         </div>
 
-        <div class="banner-carousel-item" style="background-image:url({{ asset('landing/images/slider-main/bonto3.jpeg') }})">
+        <div class="banner-carousel-item" style="background-image:url({{ asset('landing/images/slider-main/bg3.jpg') }})">
             <div class="slider-content text-right">
                 <div class="container h-100">
                     <div class="row align-items-center h-100">
                         <div class="col-md-12">
-                            <h2 class="slide-title" data-animation-in="slideInDown">Temui Layanan Kami</h2>
-                            <h3 class="slide-sub-title" data-animation-in="fadeIn">Keberlanjutan dalam Pendidikan</h3>
+                            <h2 class="slide-title" data-animation-in="slideInDown">Fitur Lengkap Absensi</h2>
+                            <h3 class="slide-sub-title" data-animation-in="fadeIn">Efisiensi dan Akurasi Data</h3>
                             <p class="slider-description lead" data-animation-in="slideInRight">
-                                Kami akan mendukung Anda
-                                dalam meraih kesuksesan melalui pendidikan yang berkelanjutan.
+                                Sistem absensi digital yang memudahkan mahasiswa dan dosen dalam proses presensi
+                                dengan teknologi terkini.
                             </p>
                             <div data-animation-in="slideInLeft">
                                 <a href="{{ route('user.kontak') }}" class="slider btn btn-primary"
@@ -76,41 +76,41 @@
                 <ul class="info-box my-box-wrap">
                     <li class="single-info">
                         <div class="info-icon">
-                            <i class="fab fa-whatsapp fa-lg"></i>
+                            <i class="fas fa-qrcode fa-lg"></i>
                         </div>
                         <div class="info-my-content">
                             <a href="#">
-                                <p>Unit Layanan Terpadu (ULT)</p>
+                                <p>Absensi QR Code</p>
                             </a>
                         </div>
                     </li>
                     <li class="single-info">
                         <div class="info-icon">
-                            <i class="fas fa-award fa-lg"></i>
+                            <i class="fas fa-mobile-alt fa-lg"></i>
                         </div>
                         <div class="info-my-content">
                             <a href="#">
-                                <p>Standar Pelayanan</p>
+                                <p>Aplikasi Mobile</p>
                             </a>
                         </div>
                     </li>
                     <li class="single-info">
                         <div class="info-icon">
-                            <i class="fas fa-users fa-lg"></i>
+                            <i class="fas fa-chart-bar fa-lg"></i>
                         </div>
                         <div class="info-my-content">
                             <a href="#">
-                                <p>Lorem Ipsum </p>
+                                <p>Rekap Otomatis</p>
                             </a>
                         </div>
                     </li>
                     <li class="single-info">
                         <div class="info-icon">
-                            <i class="fas fa-paste fa-lg"></i>
+                            <i class="fas fa-bell fa-lg"></i>
                         </div>
                         <div class="info-my-content">
                             <a href="#">
-                                <p class="multi-line">Payment Gateway With Midtrans </p>
+                                <p class="multi-line">Notifikasi Real-time</p>
                             </a>
                         </div>
                     </li>
@@ -130,8 +130,7 @@
                     <div class="ts-service-box">
                         <div class="ts-service-image-wrapper">
                             <img loading="lazy" style="width: 250px" class="img img-fluid text-center mx-auto"
-                                src="{{ asset('landing/images/icon-slider/logo-nogratifikasi.png') }}"
-                                alt="logo nogratifikasi">
+                                src="{{ asset('landing/images/icon-slider/logo-nogratifikasi.png') }}" alt="logo teknologi">
                         </div>
                     </div><!-- Service1 end -->
                 </div><!-- Col 1 end -->
@@ -139,7 +138,7 @@
                     <div class="ts-service-box">
                         <div class="ts-service-image-wrapper">
                             <img loading="lazy" style="width: 250px" class="img img-fluid text-center mx-auto"
-                                src="{{ asset('landing/images/icon-slider/logo-berakhlak.png') }}" alt="logo berakhlak">
+                                src="{{ asset('landing/images/icon-slider/logo-berakhlak.png') }}" alt="logo digital">
                         </div>
                     </div><!-- Service1 end -->
                 </div><!-- Col 1 end -->
@@ -148,7 +147,7 @@
                         <div class="ts-service-image-wrapper">
                             <img loading="lazy" style="width: 250px" class="img img-fluid text-center mx-auto"
                                 src="{{ asset('landing/images/icon-slider/logo-bangga-melayani.png') }}"
-                                alt="logo bangga melayani">
+                                alt="logo universitas">
                         </div>
                     </div><!-- Service1 end -->
                 </div><!-- Col 1 end -->
@@ -157,7 +156,7 @@
                         <div class="ts-service-image-wrapper">
                             <img loading="lazy" style="width: 250px" class="img img-fluid text-center mx-auto"
                                 src="{{ asset('landing/images/icon-slider/sehat-tanpa-korupsi.png') }}"
-                                alt="logo sehat tanpa korupsi">
+                                alt="logo pendidikan">
                         </div>
                     </div><!-- Service1 end -->
                 </div><!-- Col 1 end -->
@@ -165,8 +164,7 @@
                     <div class="ts-service-box">
                         <div class="ts-service-image-wrapper">
                             <img loading="lazy" style="width: 250px" class="img img-fluid text-center mx-auto"
-                                src="{{ asset('landing/images/icon-slider/kami-siap-zi-wbk.png') }}"
-                                alt="logo kami siap zi wbk">
+                                src="{{ asset('landing/images/icon-slider/kami-siap-zi-wbk.png') }}" alt="logo akademik">
                         </div>
                     </div><!-- Service1 end -->
                 </div><!-- Col 1 end -->
@@ -190,30 +188,26 @@
 
                 <div class="col-lg-12">
                     <div class="ts-intro">
-                        <h2 class="into-title">Tentang Kami</h2>
-                        <h3 class="into-sub-title">SDI BONTOALA SATU</h3>
+                        <h2 class="into-title">Tentang Sistem</h2>
+                        <h3 class="into-sub-title">SISTEM ABSENSI MAHASISWA</h3>
                         <p class="my-sub-content">
-                            Aplikasi Sistem Penilaian Kinerja Guru Honorer pada SDI Bontoala Satu dirancang untuk memberikan
-                            kemudahan dalam
-                            melakukan proses evaluasi dan penilaian kinerja guru honorer secara transparan dan terstruktur.
-                            Dengan memanfaatkan teknologi, sekolah dapat melakukan penilaian secara digital sehingga lebih
-                            cepat, akurat,
-                            dan efisien.
+                            Aplikasi Sistem Absensi Mahasiswa Universitas Teknologi Digital dirancang untuk memberikan
+                            kemudahan dalam proses presensi perkuliahan secara digital dan terintegrasi. Dengan memanfaatkan
+                            teknologi terkini, sistem ini memungkinkan mahasiswa melakukan absensi dengan cepat, akurat,
+                            dan efisien melalui berbagai metode.
                         </p>
                         <p class="my-sub-content">
-                            Penilaian mencakup berbagai aspek kinerja guru, termasuk kedisiplinan, kompetensi pedagogik,
-                            profesionalisme,
-                            serta tanggung jawab dalam melaksanakan tugas mengajar.
-                            Sistem ini mempermudah kepala sekolah maupun tim penilai untuk memberikan skor, memantau
-                            perkembangan, serta
-                            menghasilkan laporan kinerja secara otomatis.
+                            Sistem absensi mencakup berbagai fitur modern termasuk presensi menggunakan QR Code,
+                            fingerprint, dan aplikasi mobile. Data kehadiran mahasiswa tercatat secara real-time dan
+                            terintegrasi dengan sistem akademik kampus, memudahkan dosen dan administrasi dalam memantau
+                            kehadiran mahasiswa.
                         </p>
                         <p class="my-sub-content">
-                            Dengan adanya aplikasi ini, data penilaian tersimpan secara rapi dan terintegrasi,
-                            sehingga meminimalisir potensi kesalahan manual dalam proses evaluasi.
-                            Kami berkomitmen untuk menghadirkan sistem penilaian kinerja yang adil, transparan, dan
-                            bermanfaat
-                            bagi pengembangan kualitas guru honorer di SDI Bontoala Satu.
+                            Dengan adanya sistem ini, proses rekapitulasi kehadiran menjadi lebih efektif dan transparan.
+                            Sistem menghasilkan laporan kehadiran otomatis, notifikasi untuk mahasiswa yang mendekati batas
+                            ketidakhadiran, serta integrasi dengan sistem penilaian akademik.
+                            Kami berkomitmen untuk menyediakan sistem absensi yang handal, akurat, dan mendukung
+                            efisiensi proses akademik di Universitas Teknologi Digital.
                         </p>
                     </div><!-- Intro box end -->
                 </div><!-- Col end -->
@@ -221,16 +215,16 @@
 
 
                 <!-- <div class="col-lg-6 mt-4 mt-lg-4 justify-content-center">
-                                            <h3 class="into-sub-title"> </h3>
-                                            <div class="box-video"> -->
+                                                <h3 class="into-sub-title"> </h3>
+                                                <div class="box-video"> -->
 
                 <!--<iframe width="420" height="315" title="Program Pengembangan keprofesian Guru. Pendidikan Jasmani, olahraga dan kesehatan" src="https://www.youtube.com/embed/gJ3g7xX9O-s"-->
                 <!--    allowfullscreen>-->
                 <!--</iframe>-->
                 <!-- <div class="video-placeholder" data-src="https://www.youtube.com"
-                                                    onclick="loadVideo(this)">
-                                                    <div class="video-title">Rencana Pelaksanaan Pembelajaran</div>
-                                                </div> -->
+                                                        onclick="loadVideo(this)">
+                                                        <div class="video-title">Rencana Pelaksanaan Pembelajaran</div>
+                                                    </div> -->
                 <!--<div class="video-title">Balai Besar Guru Penggerak</div>-->
             </div>
             <!--/ Accordion end -->
@@ -253,11 +247,11 @@
                         <div class="ts-service-image-wrapper">
                             <img loading="lazy" class="w-100"
                                 src="{{ asset('landing/images/icon-slider/slider2/icon-web-jurnal.png') }}"
-                                alt="icon web jurnal">
+                                alt="icon qr code">
                         </div>
                         <div class="text-center">
                             <div class="ts-service-info">
-                                <h3 class="service-box-title"><a href="service-single.html">Jurnal Edutrans</a></h3>
+                                <h3 class="service-box-title"><a href="service-single.html">Absensi QR Code</a></h3>
 
                             </div>
                         </div>
@@ -269,11 +263,11 @@
                         <div class="ts-service-image-wrapper">
                             <img loading="lazy" class="w-100"
                                 src="{{ asset('landing/images/icon-slider/slider2/icon-web-pengaduan.png') }}"
-                                alt="icon web pengaduan">
+                                alt="icon mobile app">
                         </div>
                         <div class="text-center">
                             <div class="ts-service-info">
-                                <h3 class="service-box-title"><a href="#">Pengaduan</a></h3>
+                                <h3 class="service-box-title"><a href="#">Aplikasi Mobile</a></h3>
 
                             </div>
                         </div>
@@ -285,12 +279,11 @@
                         <div class="ts-service-image-wrapper">
                             <img loading="lazy" class="w-100"
                                 src="{{ asset('landing/images/icon-slider/slider2/icon-web-ppid.png') }}"
-                                alt="icon web ppid">
+                                alt="icon dashboard">
                         </div>
                         <div class="text-center">
                             <div class="ts-service-info">
-                                <h3 class="service-box-title"><a
-                                        href="https://sites.google.com/instruktur.belajar.id/ult-RPPHsulsel">LOREM</a></h3>
+                                <h3 class="service-box-title"><a href="#">Dashboard Dosen</a></h3>
 
                             </div>
                         </div>
@@ -302,11 +295,11 @@
                         <div class="ts-service-image-wrapper">
                             <img loading="lazy" class="w-100"
                                 src="{{ asset('landing/images/icon-slider/slider2/icon-web-sim-penggiat.png') }}"
-                                alt="icon web sim penggiat">
+                                alt="icon laporan">
                         </div>
                         <div class="text-center">
                             <div class="ts-service-info">
-                                <h3 class="service-box-title"><a href="#">RPPH Sul-Sel</a></h3>
+                                <h3 class="service-box-title"><a href="#">Laporan Kehadiran</a></h3>
 
                             </div>
                         </div>
@@ -318,11 +311,11 @@
                         <div class="ts-service-image-wrapper">
                             <img loading="lazy" class="w-100"
                                 src="{{ asset('landing/images/icon-slider/slider2/icon-web-virtual-tour.png') }}"
-                                alt="icon web virtual tour">
+                                alt="icon notifikasi">
                         </div>
                         <div class="text-center">
                             <div class="ts-service-info">
-                                <h3 class="service-box-title"><a href="#">Tur Virtual</a></h3>
+                                <h3 class="service-box-title"><a href="#">Notifikasi</a></h3>
 
                             </div>
                         </div>
@@ -334,11 +327,11 @@
                         <div class="ts-service-image-wrapper">
                             <img loading="lazy" class="w-100"
                                 src="{{ asset('landing/images/icon-slider/slider2/icon-web-visualisasi-data.png') }}"
-                                alt="icon web visualisasi data">
+                                alt="icon integrasi">
                         </div>
                         <div class="text-center">
                             <div class="ts-service-info">
-                                <h3 class="service-box-title"><a href="#">Visualisasi Data</a></h3>
+                                <h3 class="service-box-title"><a href="#">Integrasi Sistem</a></h3>
 
                             </div>
                         </div>
@@ -397,7 +390,7 @@
                     });
 
                     lazyVideos.forEach(function (video) {
-                                                                        lazyVideoObserv er.observe(video);
+                                                                                lazyVideoObserv er.observe(video);
                     });
                 } else {
                     // Fallback for older browsers
