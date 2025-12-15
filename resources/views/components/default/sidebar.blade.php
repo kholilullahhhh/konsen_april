@@ -35,7 +35,7 @@
                         </li>
                         <li class="{{ $menu == 'jadwal' ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('jadwal.index') }}">
-                                Data Jam Mengajar Dosen
+                                Data Jam Mengajar
                             </a>
                         </li>
                     </ul>
@@ -70,7 +70,7 @@
 
                 <li class="{{ $menu == 'absensi' ? 'active' : '' }}">
                     <a class="nav-link" href="{{ route('user.absensi.index') }}">
-                        <i class="fas fa-wallet"></i> <span>Data Absen Rapat</span>
+                        <i class="fas fa-wallet"></i> <span>Data Absen</span>
                     </a>
                 </li>
                 <li class="{{ $menu == 'jadwal' ? 'active' : '' }}">
