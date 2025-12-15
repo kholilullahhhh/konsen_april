@@ -54,7 +54,7 @@
                                                 <th>#</th>
                                                 <th>Nama</th>
                                                 <th>Username</th>
-                                                <th>NUPTK</th>
+                                                <th>NIM</th>
                                                 <th>Role</th>
                                                 <th>Aksi</th>
                                             </tr>
@@ -65,14 +65,14 @@
                                                     <td>{{ $index + 1 }}</td>
                                                     <td>{{ $user->name }}</td>
                                                     <td>{{ $user->username }}</td>
-                                                    <td>{{ $user->nuptk ?? '-' }}</td>
+                                                    <td>{{ $user->nim ?? '-' }}</td>
                                                     <td>
                                                         @if($user->role == 'admin')
                                                             <span class="badge badge-primary">Admin</span>
-                                                        @elseif($user->role == 'kepala_sekolah')
-                                                            <span class="badge badge-info">Kepala KUA</span>
+                                                        @elseif($user->role == 'dosen')
+                                                            <span class="badge badge-info">Dosen</span>
                                                         @else
-                                                            <span class="badge badge-info">Pegawai</span>
+                                                            <span class="badge badge-info">Mahasiswa</span>
                                                         @endif
                                                     </td>
                                                     <td>
@@ -159,7 +159,7 @@
                         text: '{{ session('error') }}',
                     });
                 @endif
-            });
+                                            });
         </script>
     @endpush
 @endsection

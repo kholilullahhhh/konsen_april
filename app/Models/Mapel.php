@@ -11,7 +11,7 @@ class Mapel extends Model
     protected $fillable = [
         // 'user_id',
         'nama',
-        'kelompok_kelas',
+        // 'kelompok_kelas',
         // 'mapel',
     ];
     //     public function user()

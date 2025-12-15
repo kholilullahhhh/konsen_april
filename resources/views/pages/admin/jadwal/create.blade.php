@@ -23,10 +23,10 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Guru</label>
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Dosen</label>
                                         <div class="col-sm-12 col-md-7">
                                             <select name="user_id" class="form-control select2" required>
-                                                <option value="">Pilih Guru</option>
+                                                <option value="">Pilih Dosen</option>
                                                 @foreach($users as $user)
                                                     <option value="{{ $user->id }}">{{ $user->name }}</option>
                                                 @endforeach
@@ -70,17 +70,17 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group row mb-4">
-                                        <label
-                                            class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Input Nilai</label>
-                                        <div class="col-sm-12 col-md-7">
-                                            <select name="keterangan" class="form-control" required>
-                                                <option value="">Pilih Keterangan</option>
-                                                <option value="ya">Aktif</option>
-                                                <option value="tidak">Tidak Aktif</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                                    <!-- <div class="form-group row mb-4">
+                                            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Input
+                                                Nilai</label>
+                                            <div class="col-sm-12 col-md-7">
+                                                <select name="keterangan" class="form-control" required>
+                                                    <option value="">Pilih Keterangan</option>
+                                                    <option value="ya">Aktif</option>
+                                                    <option value="tidak">Tidak Aktif</option>
+                                                </select>
+                                            </div>
+                                        </div> -->
 
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>

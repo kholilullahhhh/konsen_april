@@ -18,7 +18,7 @@
 
             @if (session('role') == 'admin')
                 <li
-                    class="nav-item dropdown {{ ($menu == 'pegawai' || $menu == 'agenda' || $menu == 'jadwal') ? 'active' : '' }}">
+                    class="nav-item dropdown {{ ($menu == 'pegawai' || $menu == 'agenda' || $menu == 'absen' || $menu == 'jadwal') ? 'active' : '' }}">
                     <a href="#" class="nav-link has-dropdown"><i class="fas fa-sitemap"></i>
                         <span>Master Data</span>
                     </a>
@@ -30,30 +30,35 @@
                         </li>
                         <li class="{{ $menu == 'agenda' ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('agenda.index') }}">
-                                Data jadwal Kelas
+                                Data Absen Kelas
                             </a>
                         </li>
                         <li class="{{ $menu == 'jadwal' ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('jadwal.index') }}">
-                                Data Jam Mengajar
+                                Data Jam Mengajar Dosen
                             </a>
                         </li>
                     </ul>
+                <li class="{{ $menu == 'absen' ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('absensi.index') }}">
+                        <i class="fas fa-wallet"></i> <span>Data Rekap Absensi</span>
+                    </a>
+                </li>
                 </li>
 
 
 
                 <!-- <li class="{{ $menu == 'penilaian_kinerja' ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('penilaian_kinerja.index') }}">
-                            <i class="fas fa-wallet"></i> <span>Data Laporan Kinerja</span>
-                        </a>
-                    </li> -->
+                                                                                                            <a class="nav-link" href="{{ route('penilaian_kinerja.index') }}">
+                                                                                                                <i class="fas fa-wallet"></i> <span>Data Laporan Kinerja</span>
+                                                                                                            </a>
+                                                                                                        </li> -->
 
-                <li class="{{ $menu == 'absensi' ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ route('absensi.index') }}">
-                        <i class="fas fa-wallet"></i> <span>Data Absen Kelas</span>
-                    </a>
-                </li>
+                <!-- <li class="{{ $menu == 'absensi' ? 'active' : '' }}">
+                                                                                                <a class="nav-link" href="{{ route('absensi.index') }}">
+                                                                                                    <i class="fas fa-wallet"></i> <span>Data Jadwal Kelas</span>
+                                                                                                </a>
+                                                                                            </li> -->
 
 
                 <li class="{{ $menu == 'akun' ? 'active' : '' }}">
@@ -70,23 +75,33 @@
 
                 <li class="{{ $menu == 'absensi' ? 'active' : '' }}">
                     <a class="nav-link" href="{{ route('user.absensi.index') }}">
-                        <i class="fas fa-wallet"></i> <span>Data Absen</span>
+                        <i class="fas fa-wallet"></i> <span>Data Absen Kelas</span>
                     </a>
                 </li>
-                <li class="{{ $menu == 'jadwal' ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ route('user.jadwal.index') }}">
-                        <i class="fas fa-wallet"></i> <span>Data Input Nilai</span>
-                    </a>
-                </li>
+                <!-- <li class="{{ $menu == 'jadwal' ? 'active' : '' }}">
+                                                                                            <a class="nav-link" href="{{ route('user.jadwal.index') }}">
+                                                                                                <i class="fas fa-wallet"></i> <span>Data Input Nilai</span>
+                                                                                            </a>
+                                                                                        </li> -->
                 <li class="menu-header">Landing Page</li>
 
             @endif
 
-            @if (session('role') == 'kepala_sekolah')
+            @if (session('role') == 'dosen')
 
-                <li class="{{ $menu == 'penilaian_kinerja' ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ route('penilaian_kinerja.index') }}">
-                        <i class="fas fa-wallet"></i> <span>Laporan Kinerja</span>
+                <!-- <li class="{{ $menu == 'penilaian_kinerja' ? 'active' : '' }}">
+                                    <a class="nav-link" href="{{ route('penilaian_kinerja.index') }}">
+                                        <i class="fas fa-wallet"></i> <span>Laporan Kinerja</span>
+                                    </a>
+                                </li> -->
+                <li class="{{ $menu == 'agenda' ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('agenda.index') }}">
+                        <i class="fas fa-wallet"></i> <span>Data Absen Kelas </span>
+                    </a>
+                </li>
+                <li class="{{ $menu == 'jadwal' ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('dosen.jadwal.index') }}">
+                        <i class="fas fa-wallet"></i> <span>Data Jam Mengajar Dosen</span>
                     </a>
                 </li>
                 <li class="menu-header">Landing Page</li>

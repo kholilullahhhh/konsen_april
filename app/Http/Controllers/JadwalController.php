@@ -21,11 +21,29 @@ class JadwalController extends Controller
         $datas = Jadwal::with(['user', 'mapel'])->get();
         return view('pages.admin.jadwal.index', compact('datas', 'menu'));
     }
+    public function indexDosen()
+    {
+        $menu = $this->menu;
+
+        // Pastikan hanya dosen
+        if (auth()->user()->role !== 'dosen') {
+            abort(403, 'Unauthorized');
+        }
+
+        // Ambil jadwal sesuai dosen yang sedang login
+        $datas = Jadwal::where('user_id', auth()->id())
+            ->with(['user', 'mapel'])
+            ->latest()
+            ->get();
+
+        return view('pages.admin.jadwal.index', compact('datas', 'menu'));
+    }
+
     public function create()
     {
         $menu = $this->menu;
         $mapel = Mapel::all();
-        $users = User::where('role', 'user')->get();
+        $users = User::where('role', 'dosen')->get();
         return view('pages.admin.jadwal.create', compact('users', 'mapel', 'menu'));
     }
 

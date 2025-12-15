@@ -1,4 +1,4 @@
-@extends('layouts.app', ['title' => 'Data Agenda'])
+@extends('layouts.app', ['title' => 'Data Tema'])
 @section('content')
     @push('styles')
         <link rel="stylesheet" href="{{ asset('library/summernote/dist/summernote-bs4.css') }}">
@@ -11,7 +11,7 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Ubah Agenda Rapat</h1>
+                <h1>Ubah Jadwal Kelas</h1>
             </div>
 
             <div class="section-body">
@@ -29,7 +29,8 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Judul</label>
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama
+                                            Kelas</label>
                                         <div class="col-sm-12 col-md-7">
                                             <input value="{{ $data->judul }}" required type="text" name="judul"
                                                 class="form-control">
@@ -37,24 +38,45 @@
                                     </div>
 
                                     <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Lokasi
-                                            Agenda</label>
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Ruangan
+                                            Kelas</label>
                                         <div class="col-sm-6 col-md-4">
                                             <input required type="text" class="form-control"
-                                                value="{{ $data->tempat_kegiatan }}" name="lokasi_kegiatan">
+                                                value="{{ $data->lokasi_kegiatan }}" name="lokasi_kegiatan">
                                         </div>
                                     </div>
-                                    {{-- <div class="form-group row mb-4">
-                                        <label
-                                            class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kategori</label>
+
+                                    <div class="form-group row mb-4">
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Titik
+                                            Lokasi</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <select required name="kategori_id" class="form-control selectric">
-                                                <option>Tech</option>
-                                                <option>News</option>
-                                                <option>Political</option>
-                                            </select>
+                                            <div class="row">
+                                                <div class="col-md-4 mb-2">
+                                                    <input type="text" id="latitude" name="latitude" class="form-control"
+                                                        placeholder="Latitude" value="{{ $data->latitude ?? '' }}" readonly>
+                                                </div>
+                                                <div class="col-md-4 mb-2">
+                                                    <input type="text" id="longitude" name="longitude" class="form-control"
+                                                        placeholder="Longitude" value="{{ $data->longitude ?? '' }}"
+                                                        readonly>
+                                                </div>
+                                            </div>
+                                            <button type="button" id="get-location" class="btn btn-info mt-2">📍 Ambil
+                                                Lokasi Saat Ini</button>
+                                            <small class="text-muted d-block mt-2">Pastikan browser kamu mengizinkan akses
+                                                lokasi.</small>
                                         </div>
-                                    </div> --}}
+                                    </div>
+
+                                    <div class="form-group row mb-4">
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Batas
+                                            Radius</label>
+                                        <div class="col-sm-6 col-md-4">
+                                            <input type="number" id="radius" name="radius" class="form-control"
+                                                placeholder="Radius (meter)" value="{{ $data->radius ?? '50' }}">
+                                        </div>
+                                    </div>
+
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Isi
                                             Agenda</label>
@@ -80,9 +102,7 @@
                                             <input value="{{ $data->jam_mulai }}" required type="time" value=""
                                                 class="form-control" name="jam_mulai">
                                         </div>
-
                                     </div>
-
 
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Status</label>
@@ -99,24 +119,17 @@
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
                                         <div class="col-sm-12 col-md-7">
-                                            <button class="btn btn-primary">Ubah Agenda</button>
+                                            <button class="btn btn-primary">Ubah Jadwal</button>
                                             <a href="{{ route('agenda.index') }}" class="btn btn-warning">Kembali</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-
                         </form>
                     </div>
-
                 </div>
-
-
-
             </div>
-    </div>
-    </section>
+        </section>
     </div>
 
     @push('scripts')
@@ -127,7 +140,21 @@
         <script src="{{ asset('js/page/features-post-create.js') }}"></script>
         <script src="{{ asset('library/selectric/public/jquery.selectric.min.js') }}"></script>
         <script src="{{ asset('js/page/features-post-create.js') }}"></script>
-
         <script src="{{ asset('js/page/forms-advanced-forms.js') }}"></script>
+
+        <script>
+            document.getElementById('get-location').addEventListener('click', function () {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        document.getElementById('latitude').value = position.coords.latitude;
+                        document.getElementById('longitude').value = position.coords.longitude;
+                    }, function (error) {
+                        alert('Gagal mengambil lokasi: ' + error.message);
+                    });
+                } else {
+                    alert('Browser tidak mendukung geolocation.');
+                }
+            });
+        </script>
     @endpush
 @endsection

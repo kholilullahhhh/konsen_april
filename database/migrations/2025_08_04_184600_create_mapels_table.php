@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->id();
             // $table->string('user_id');
             $table->string('nama');
-            $table->enum('kelompok_kelas', ['1-2', '1-6', '1-3', '3-6', '4B', '5B', '6B']);
+            // $table->enum('kelompok_kelas', ['1-2', '1-6', '1-3', '3-6', '4B', '5B', '6B']);
             // $table->string('status'); // terinput atau tidak
             $table->timestamps();
         });

@@ -11,7 +11,7 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Tambah Absensi</h1>
+                <h1>Tambah Jadwal Kelas</h1>
             </div>
 
             <div class="section-body">
@@ -28,40 +28,49 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Judul</label>
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama
+                                            Kelas</label>
                                         <div class="col-sm-12 col-md-7">
                                             <input required type="text" name="judul" class="form-control">
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Ruangan Agenda</label>
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Ruangan
+                                            Kelas</label>
                                         <div class="col-sm-6 col-md-4">
-                                            <input required type="text" value=""
-                                                class="form-control" name="lokasi_kegiatan">
+                                            <input required type="text" value="" class="form-control"
+                                                name="lokasi_kegiatan">
                                         </div>
                                     </div>
 
                                     <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Titik Lokasi</label>
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Titik
+                                            Lokasi</label>
                                         <div class="col-sm-12 col-md-7">
                                             <div class="row">
                                                 <div class="col-md-4 mb-2">
-                                                    <input type="text" id="latitude" name="latitude" class="form-control" placeholder="Latitude" readonly>
+                                                    <input type="text" id="latitude" name="latitude" class="form-control"
+                                                        placeholder="Latitude" readonly>
                                                 </div>
                                                 <div class="col-md-4 mb-2">
-                                                    <input type="text" id="longitude" name="longitude" class="form-control" placeholder="Longitude" readonly>
+                                                    <input type="text" id="longitude" name="longitude" class="form-control"
+                                                        placeholder="Longitude" readonly>
                                                 </div>
                                             </div>
-                                            <button type="button" id="get-location" class="btn btn-info mt-2">📍 Ambil Lokasi Saat Ini</button>
-                                            <small class="text-muted d-block mt-2">Pastikan browser kamu mengizinkan akses lokasi.</small>
+                                            <button type="button" id="get-location" class="btn btn-info mt-2">📍 Ambil
+                                                Lokasi Saat Ini</button>
+                                            <small class="text-muted d-block mt-2">Pastikan browser kamu mengizinkan akses
+                                                lokasi.</small>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Batas Radius</label>
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Batas
+                                            Radius</label>
                                         <div class="col-sm-6 col-md-4">
-                                            <input type="number" id="radius" name="radius" class="form-control" placeholder="Radius (meter)" value="50">
+                                            <input type="number" id="radius" name="radius" class="form-control"
+                                                placeholder="Radius (meter)" value="50">
                                         </div>
                                     </div>
 
@@ -85,18 +94,18 @@
                                     </div>
 
                                     <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tanggal Agenda</label>
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tanggal
+                                            Agenda</label>
                                         <div class="col-sm-6 col-md-4 mb-4">
-                                            <input required  type="date" value=""
-                                                class="form-control" name="tgl_kegiatan">
+                                            <input required type="date" value="" class="form-control" name="tgl_kegiatan">
                                         </div>
                                     </div>
 
                                     <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jam Agenda</label>
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jam
+                                            Agenda</label>
                                         <div class="col-sm-6 col-md-4 mb-4">
-                                            <input required  type="time" value=""
-                                                class="form-control" name="jam_mulai">
+                                            <input required type="time" value="" class="form-control" name="jam_mulai">
                                         </div>
                                     </div>
 
@@ -118,7 +127,7 @@
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
                                         <div class="col-sm-12 col-md-7">
-                                            <button class="btn btn-primary">Buat Agenda</button>
+                                            <button class="btn btn-primary">Buat Jadwal</button>
                                             <a href="{{ route('agenda.index') }}" class="btn btn-warning">Kembali</a>
                                         </div>
                                     </div>
@@ -150,12 +159,12 @@
         <script src="{{ asset('js/page/forms-advanced-forms.js') }}"></script>
 
         <script>
-            document.getElementById('get-location').addEventListener('click', function() {
+            document.getElementById('get-location').addEventListener('click', function () {
                 if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(function(position) {
+                    navigator.geolocation.getCurrentPosition(function (position) {
                         document.getElementById('latitude').value = position.coords.latitude;
                         document.getElementById('longitude').value = position.coords.longitude;
-                    }, function(error) {
+                    }, function (error) {
                         alert('Gagal mengambil lokasi: ' + error.message);
                     });
                 } else {

@@ -6,12 +6,13 @@ use Illuminate\Http\Request;
 use App\Models\Absensi;
 use App\Models\Agenda;
 use App\Models\User;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
 
 
 class AbsensiController extends Controller
 {
-    private $menu = 'absensi';
+    private $menu = 'absen';
 
     /**
      * Display a listing of the resource.
@@ -63,6 +64,18 @@ class AbsensiController extends Controller
         $data = Absensi::find($id);
         $data->delete();
         return response()->json($data);
+    }
+
+    public function cetak()
+    {
+        $datas = Absensi::with(['agenda', 'user'])->get();
+
+        $pdf = Pdf::loadView('pages.admin.absensi.cetak', [
+            'datas' => $datas
+        ])->setPaper('A4', 'landscape');
+
+        return $pdf->stream('data-absensi.pdf');
+        // atau ->download('data-absensi.pdf');
     }
 
 
